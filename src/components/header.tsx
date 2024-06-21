@@ -1,6 +1,6 @@
 export default function Header(): React.ReactElement {
 	return (
-		<div className="p-4 lg:p-5 xl:py-6 xl:px-8 flex flex-row gap-2 w-full bg-white">
+		<div className="p-4 lg:p-5 xl:p-6 flex flex-row gap-2 w-full bg-white">
 			<svg
 				className="w-8"
 				fill="none"

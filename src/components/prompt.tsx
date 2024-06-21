@@ -1,9 +1,15 @@
+import prompt from "@/utils/promptAction";
+
 export default function Prompt(): React.ReactElement {
 	return (
-		<form action="" className="p-4 lg:p-5 xl:p-6 flex flex-row gap-2 bg-white">
+		<form
+			action={prompt}
+			className="p-4 lg:p-5 xl:p-6 flex flex-row gap-2 bg-white"
+		>
 			<input
 				type="text"
-				name="prompt"
+				name="search"
+				id="search"
 				placeholder="Masukkan Prompt anda..."
 				className="p-3 max-w-[24rem] h-[3rem] flex-grow rounded-xl outline-none border border-slate-200 focus:border-2 focus:border-primary bg-slate-200 hover:bg-white focus:bg-white transition-all"
 			/>

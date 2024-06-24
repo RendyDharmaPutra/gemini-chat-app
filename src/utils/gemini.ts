@@ -8,7 +8,7 @@ import {
 
 // Call the gemini-pro-vision model, and get a stream of results
 const genAI: GoogleGenerativeAI = new GoogleGenerativeAI(
-	"AIzaSyCmQFI6yh8tywJWIxFFIdkxWwAalbSBO_k",
+	process.env.NEXT_PUBLIC_API_KEY!,
 );
 
 const model: GenerativeModel = genAI.getGenerativeModel({
@@ -25,7 +25,7 @@ const chat: ChatSession = model.startChat({
 	history: [],
 	// Check here
 	generationConfig: {
-		maxOutputTokens: 2000,
+		maxOutputTokens: 1000,
 	},
 });
 

@@ -6,6 +6,7 @@ export default function Footer(): React.ReactElement {
 			<p className="text-sm font-semibold">
 				©2024 • Simple Gemini Chat App <span className="font-normal">by</span>{" "}
 				<Link
+					target="_blank"
 					href={`https://archilst-portofolio.vercel.app/`}
 					className="font-bold text-blue-500"
 				>

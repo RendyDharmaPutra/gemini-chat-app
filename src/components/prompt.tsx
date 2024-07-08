@@ -1,9 +1,7 @@
 "use client";
 
 import chat from "@/utils/gemini";
-import prompt from "@/utils/promptAction";
 import { result } from "@/utils/type";
-import { EnhancedGenerateContentResponse } from "@google/generative-ai";
 import { Dispatch, SetStateAction, useState } from "react";
 
 export default function Prompt({
@@ -28,13 +26,8 @@ export default function Prompt({
 			try {
 				const result = await chat.sendMessageStream(input);
 
-				// let buffer: result = {
-				// 	status: "success",
-				// 	response: [],
-				// };
 				const buffer: string[] = [];
 
-				// setChatResult(result.stream);
 				for await (let response of result.stream) {
 					buffer.push(response.text());
 				}
@@ -46,12 +39,6 @@ export default function Prompt({
 					response: buffer,
 				});
 			} catch (e) {
-				console.log(e);
-
-				// const error: result = {
-				// 	status: "error",
-				// 	response: [String(e)],
-				// };
 				setChatResult({
 					status: "error",
 					response: [String(e)],
@@ -61,10 +48,7 @@ export default function Prompt({
 	};
 
 	return (
-		<form
-			// action={prompt}
-			className="p-4 lg:p-5 xl:p-6 flex flex-row gap-2 bg-white"
-		>
+		<form className="p-4 lg:p-5 xl:p-6 flex flex-row gap-2 bg-white">
 			<input
 				type="text"
 				name="search"

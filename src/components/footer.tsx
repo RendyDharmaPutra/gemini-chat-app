@@ -5,7 +5,10 @@ export default function Footer(): React.ReactElement {
 		<div className="p-4 flex justify-center w-full bg-white">
 			<p className="text-sm font-semibold">
 				©2024 • Simple Gemini Chat App <span className="font-normal">by</span>{" "}
-				<Link href={`/`} className="font-bold text-blue-500">
+				<Link
+					href={`https://archilst-portofolio.vercel.app/`}
+					className="font-bold text-blue-500"
+				>
 					Archilst
 				</Link>
 			</p>
